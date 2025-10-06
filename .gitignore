@@ -1,1 +1,94 @@
-.idea
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon? files
+Icon?
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheelhouse/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.tox/
+.pytest_cache/
+.pyre/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/          # user uploaded files
+staticfiles/    # collected static files (if you collect to repo, remove this)
+# If you commit migrations, DO NOT ignore: */migrations/*.py
+# If you want to ignore migration files (not recommended), uncomment:
+# */migrations/*.py
+# */migrations/*.pyc
+
+# Environment / secrets
+.env
+.env.*          # e.g. .env.dev, .env.prod
+certs/
+private.key
+*.pem
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS Finder and Spotlight
+.Spotlight-V100
+.Trashes
+.fseventsd/
+
+# Node / frontend (if present)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Misc
+*.sqlite3
+*.db
+*.bak
+*.swp
+*.swo
+*.tmp
+Thumbs.db
