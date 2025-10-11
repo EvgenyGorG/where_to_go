@@ -19,9 +19,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from where_to_go import views
+from where_to_go.views import index
+from places.views import place_data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
+    path('', index, name='index'),
+    path('places/<int:place_id>/', place_data, name='places'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
