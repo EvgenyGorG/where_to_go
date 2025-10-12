@@ -1,6 +1,8 @@
 from django.db import models
 from django.db.models import PositiveSmallIntegerField
 
+from tinymce.models import HTMLField
+
 
 class Place(models.Model):
     title = models.CharField(
@@ -9,7 +11,7 @@ class Place(models.Model):
     short_description = models.TextField(
         blank=True, verbose_name='краткое описание'
     )
-    long_description = models.TextField(
+    long_description = HTMLField(
         blank=True, verbose_name='расширенное описание'
     )
     latitude = models.FloatField(
