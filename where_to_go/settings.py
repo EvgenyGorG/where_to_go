@@ -20,7 +20,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env()
-env.read_env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -31,7 +31,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '[::1]'])
 
 CSRF_COOKIE_SECURE = env.bool('CSRF_COOKIE_SECURE', default=True)
 SESSION_COOKIE_SECURE = env.bool('SESSION_COOKIE_SECURE', default=True)
