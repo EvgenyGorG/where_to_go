@@ -23,7 +23,7 @@ class ImageStackedInline(SortableStackedInline):
 
 @admin.register(Image)
 class SortableImageAdmin(SortableAdminBase, admin.ModelAdmin):
-    pass
+    raw_id_fields = ['place']
 
 
 @admin.register(Place)
