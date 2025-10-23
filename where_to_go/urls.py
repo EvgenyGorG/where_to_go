@@ -19,8 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from where_to_go.views import index
-from places.views import place_data
+from places.views import place_data, index
 
 
 urlpatterns = [
